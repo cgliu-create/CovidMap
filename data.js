@@ -52,6 +52,7 @@ function update() {
        
         let color = 1;
         let counter = 1;
+        let index = 0;
 
         for (const state of states) {
             let tag = state.toLowerCase();
@@ -59,8 +60,10 @@ function update() {
             let el = document.getElementsByClassName(tag);
             for (const l of el) {
                 l.style.fill = colors[color];
-                console.log(colors[color])
+                l.dataset.info = nums[index];
+                console.log(colors[color]);
             }
+            index +=1;
             counter +=1;
             if (counter == 4) {
                 color +=1
