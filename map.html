@@ -309,10 +309,10 @@
       border: 2px solid black;
     }
     path:hover, circle:hover {
-      stroke: #002868 !important;
+      stroke: black !important;
       stroke-width:2px;
       stroke-linejoin: round;
-      fill: #002868 !important;
+      fill: black !important;
       cursor: pointer;
     }
     #info-box {
@@ -328,7 +328,16 @@
       font-family: arial;
     }
     .ca{
-      fill: hsl(0, 100%, 50%);;
+      fill: hsl(0, 100%, 10%);
+      fill: hsl(0, 100%, 20%);
+      fill: hsl(0, 100%, 30%);
+      fill: hsl(0, 100%, 40%);
+      fill: hsl(0, 100%, 50%);
+      fill: hsl(0, 100%, 60%);
+      fill: hsl(0, 100%, 70%);
+      fill: hsl(0, 100%, 80%);
+      fill: hsl(0, 100%, 90%);
+      fill: hsl(0, 100%, 100%);
     }
   </style>
 </body>
@@ -348,13 +357,6 @@
     $('#info-box').css('top',e.pageY-$('#info-box').height()-30);
     $('#info-box').css('left',e.pageX-($('#info-box').width())/2);
   }).mouseover();
-
-  const Http = new XMLHttpRequest();
-  const url='https://api.covid19api.com/country/united-states/status/confirmed/live?province=ohio';
-  Http.open("GET", url);
-  Http.send();
-
-  Http.onreadystatechange = (e) => {
-    console.log(Http.responseText)
-  }
 </script>
+
+<script src="./data.js"></script>
